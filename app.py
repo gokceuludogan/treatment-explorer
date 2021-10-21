@@ -27,7 +27,6 @@ results_df['name'] = results_df.apply(lambda x: f'{x["itemLabel.value"]}:{x["ite
 disease_name = st.selectbox('Map the disease to Wikidata', results_df['name'].tolist())
 # disease_id = st.text_input('Enter the identifier', value='Q11081', key='id')
 disease_id = results_df[results_df['name'] == disease_name]['id'].tolist()[0]
-st.write(disease_name)
 
 retrieve_drugs = f"""
   SELECT DISTINCT ?item ?itemLabel ?itemDescription ?ChEMBL
