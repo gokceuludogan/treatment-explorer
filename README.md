@@ -24,5 +24,5 @@ streamlit-agraph
 ## Usage
 
 ```
-python app.py
+streamlit run app.py
 ```
